@@ -55,7 +55,6 @@ describe('Suits', () => {
   });
 });
 
-const Suits = [ '♠', '♥', '♣', '♦' ];
-//const Suits = ['\u2666', '\u2665', '\u2666', '\u2663'];
+const Suits = [ '♠', '♥', '♣', '♦' ]; // declares each symbol for the suits / aces, clubs etc.
 
 module.exports = Suits;

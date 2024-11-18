@@ -2,7 +2,7 @@ const Card = import('./Card.js');
 const Deck = import('./Deck.js');
 const Player = import('./Player.js');
 const Suits = [ '♠', '♥', '♣', '♦' ];
-const Faces = [ 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K' ];
+const Faces = [ 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K' ]; 
 
 class Game { // Game Logic
   constructor() {
@@ -10,7 +10,7 @@ class Game { // Game Logic
     deck.shuffle();
 
     const [hand1, hand2] = deck.deal();
-    this.player1 = new Player('Player 1', hand1);
+    this.player1 = new Player('Player 1', hand1); // Creates Players along with Hands
     this.player2 = new Player('Player 2', hand2);
   }
 
@@ -21,12 +21,12 @@ class Game { // Game Logic
       const card1 = this.player1.playCard();
       const card2 = this.player2.playCard();
 
-      console.log(`${this.player1.name} plays ${card1.face} of ${card1.suit}`);
+      console.log(`${this.player1.name} plays ${card1.face} of ${card1.suit}`); // Console.log's each players card that they put down
       console.log(`${this.player2.name} plays ${card2.face} of ${card2.suit}`);
 
       if (card1.value > card2.value) {
         this.player1.addPoint();
-        console.log(`${this.player1.name} wins this round`);
+        console.log(`${this.player1.name} wins this round`); // Tally's each players points and declares winner for that match
       } else if (card1.value < card2.value) {
         this.player2.addPoint();
         console.log(`${this.player2.name} wins this round`);
@@ -36,7 +36,7 @@ class Game { // Game Logic
       console.log(`Score => ${this.player1.name}: ${this.player1.score}, ${this.player2.name}: ${this.player2.score}\n`);
     }
 
-    console.log("Game over!");
+    console.log("Game over!"); // Tally's each players points and declares winner overall
     if (this.player1.score > this.player2.score) {
       console.log(`${this.player1.name} wins the game!`);
     } else if (this.player1.score < this.player2.score) {
@@ -47,5 +47,5 @@ class Game { // Game Logic
   }
 }
 
-const game = new Game();
+const game = new Game(); // starts the game but its broken
 game.play();

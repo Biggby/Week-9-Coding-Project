@@ -41,8 +41,8 @@ describe('Player', () => {
        /* Act / Invoke */
        const player = new Player("Bob", hand);
        /* Assert */
-       expect(player.name).to.equal("Bob"); // Expect name to be set
-       expect(player.getHand()).to.deep.equal(hand); // Expect hand to match the initialized hand array
+       expect(player.name).to.equal("Bob"); // Expects a player's name to be set
+       expect(player.getHand()).to.deep.equal(hand); // Expect hand to match the standard hand array ()
        done();
     });
   });
@@ -102,7 +102,7 @@ describe('Player', () => {
       const handCount = player.add(null);  //pass null
       
       /* Assert */
-      expect(handCount).to.equal(startHandCount);  // should be null
+      expect(handCount).to.equal(startHandCount);  // should be null // Zero
       
       done();
     });
@@ -116,11 +116,11 @@ describe('Player', () => {
       const startHandCount = player.getHand().length;
       
       /* Act / Invoke */
-      const handCount = player.add(card3);  // Add a valid card
+      const handCount = player.add(card3);  // Adds a valid card
       
       /* Assert */
       expect(handCount).to.equal(startHandCount + 1);  // Hand count should increase by 1
-      expect(player.getHand()).to.deep.equal([card1, card2, card3]);  // Hand should include the new card
+      expect(player.getHand()).to.deep.equal([card1, card2, card3]);  // Hand should include the new card that was dealt
       
       done();
     });
