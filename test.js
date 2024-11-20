@@ -1,9 +1,9 @@
 // tests.js
 const chai = require("chai");
-const Suits = require('./Suits.cjs');
-const { Card, Faces } = require('./Card.cjs');
-const Deck = require('./Deck.cjs');
-const Player = require('./Player.cjs');
+const Suits = require('./Suits.js');
+const { Card, Faces } = require('./Card.js');
+const Deck = require('./Deck.js');
+const Player = require('./Player.js');
 
 
 

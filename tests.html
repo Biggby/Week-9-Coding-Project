@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Mocha Tests</title>
     <link rel="stylesheet" href="node_modules/mocha/mocha.css">
   </head>
   <body>
     <div id="mocha"></div>
-    <script src="node_modules/chai/chai.js"></script>
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
+    <script src="/node_modules/mocha/mocha.js"></script>
+    <script src="/node_modules/chai/chai.js"></script>
 
-    <!-- Import the tests file that includes all necessary imports -->
-    <script type="module" src="./Game.js"></script>
-
+    <!-- Import Game.js as a module -->
     <script type="module">
+      import './Game.js'; // Adjust this if Game.js has specific tests
+
+      mocha.setup('bdd');
+      const assert = chai.assert;
+      const expect = chai.expect;
+
+      // Run Mocha tests
       mocha.run();
     </script>
   </body>

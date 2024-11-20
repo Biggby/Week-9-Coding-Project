@@ -1,10 +1,12 @@
-const chai = require("chai");
-const assert = chai.assert;
-const expect = chai.expect;
-const Card = require('./Card.cjs').Card;
-const Deck = require('./Deck.js');
-const { Faces } = require("./Card.cjs");
-const { Suits } = require("./Suits.js")
+import chai from "chai";
+const { assert, expect } = chai;
+import Suits from "./Suits.js";
+import Faces from "./Card.js";
+import Card from "./Card.js";
+import Deck from "./Deck.js"
+import exp from "constants";
+import { error } from "console";
+
  
 // Player {
 //   ctor(name, hand);

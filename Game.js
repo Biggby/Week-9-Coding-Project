@@ -1,6 +1,6 @@
-const Card = import('./Card.js');
-const Deck = import('./Deck.js');
-const Player = import('./Player.js');
+import Deck from "./Deck.js";
+import Player from "./Player.js";
+import Card from  "./Card.js";
 const Suits = [ '♠', '♥', '♣', '♦' ];
 const Faces = [ 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K' ]; 
 

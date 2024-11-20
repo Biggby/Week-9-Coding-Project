@@ -1,9 +1,8 @@
-const chai = require("chai");
-const assert = chai.assert;
-const expect = chai.expect;
-const Suits = require('./Suits.js');
-const exp = require("constants");
-const { error } = require("console");
+import chai from "chai";
+const { assert, expect } = chai;
+import Suits from "./Suits.js";
+import exp from "constants";
+import { error } from "console";
 const Faces = [ 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K' ];
 
 // Card {
