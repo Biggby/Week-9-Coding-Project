@@ -1,6 +1,5 @@
-const chai = require("chai");
-const assert = chai.assert;
-const expect = chai.expect;
+import chai from "chai";
+const { assert, expect } = chai;
 
 describe('Suits', () => {
   describe('#array', () => {
@@ -57,4 +56,4 @@ describe('Suits', () => {
 
 const Suits = [ '♠', '♥', '♣', '♦' ]; // declares each symbol for the suits / aces, clubs etc.
 
-module.exports = Suits;
+export default Suits;

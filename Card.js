@@ -205,7 +205,5 @@ class Card {
   }
 }
 
-module.exports = {
-  Card : Card,
-  Faces : Faces
-};
+
+export default (Card, Faces);
