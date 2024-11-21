@@ -175,16 +175,16 @@ class Card {
    * @param {String} suit The suit of the card. Accepted values: '♠', '♥', '♣', '♦'
    * @param {String} face The face or value of the card. Accepted values: 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
    */
-  constructor(suit, face) {
-    if (Suits.indexOf(suit) < 0) {
-      throw new Error(`Invalid suit specified. Valid values are: ${Suits.join(', ')} `);
+    constructor(suit, face) {
+      if (Suits.indexOf(suit) < 0) {
+        throw new Error(`Invalid suit specified. Valid values are: ${Suits.join(', ')} `);
+      }
+      if ((typeof face === "undefined") || !face) {
+        throw new Error(`Invalid face specified. Valid values are: ${Faces.join(', ')} `);
+      }
+      this.suit = suit;
+      this.face = face;
     }
-    if ((typeof face === "undefined") || !face) {
-      throw new Error(`Invalid face specified. Valid values are: ${Faces.join(', ')} `);
-    }
-    this.suit = suit;
-    this.face = face;
-  }
 
   /**
    * Calculates the value of the specified card.
@@ -196,6 +196,7 @@ class Card {
     return parseInt(this.face);
   }
 
+
   /**
    * Returns the string representation of the object.
    * @returns {String} The string representation of the object (e.g., '♠A' for the Ace of Spades)
@@ -206,4 +207,4 @@ class Card {
 }
 
 
-export default (Card, Faces);
+export default Card;
