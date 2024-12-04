@@ -137,6 +137,10 @@ class Deck {
     return this.#cards.length ? this.#cards.shift() : null;
   }
 
+  deal() {
+    return [this.#cards.slice(0, 26), this.#cards.slice(26)];
+  }
+  
   toString() {
     return this.#cards.map(card => card.toString()).join(', ');
   }

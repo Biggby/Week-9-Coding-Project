@@ -236,6 +236,7 @@ class Player {
     if (!name) {
       throw new Error("Player must have a name");
     }
+    this.score = 0; // score of the game at start
     this.name = name;
     this.hand = hand; // Initialize hand if provided, or default to an empty array
   }
@@ -289,7 +290,14 @@ class Player {
     return true;
   }
   
+  playCard() {
+    return this.hand.shift(); // Play the top card and remove it from the hand
+  }
 
+  addPoint() {
+    this.score += 1; // Increment the player's score
+  }
+  
   /**
    * Returns the string representation of the object.
    * @returns {String} The string representation of the object

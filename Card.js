@@ -184,6 +184,7 @@ class Card {
       }
       this.suit = suit;
       this.face = face;
+      this.value = this.getValue();
     }
 
   /**
